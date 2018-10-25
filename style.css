@@ -1,0 +1,139 @@
+/* *
+ * Basic stylesheet for https://insomnux.github.io/html-tags-dummy/
+ * Last updated: 24/11/2017
+ * Source: https://github.com/insomnux/html-tags-dummy
+ * */
+
+/* === Borderboxing === */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* ~~ if things go/look/feel funky or if you really like red borders
+   * uncomment this: ~~ */
+  /*
+  border: red 1px solid;
+   */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* <!-- END Borderboxing --> */
+
+/* === Basic === */
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  color: #444;
+  font-family: "Helvetica", "Verdana", "Liberation Sans", sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {font-size: 2.8rem;}
+h2 {font-size: 2.4rem;}
+h3 {font-size: 2.2rem;}
+h4 {font-size: 2.0rem;}
+h5 {font-size: 1.6rem;}
+h6 {font-size: 1.4rem;}
+
+p {font-size: 16px;}
+
+code, pre, kbd, samp {
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 2;
+}
+code, pre {
+  background-color: rgba(69, 80, 90, 0.8);
+  color: #391214;
+}
+pre {
+  border-radius: 0.4rem;
+  padding: 1rem 2rem;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* <!-- END Basic --> */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.button {
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  border-radius: 7px;
+  border-color: #141414;
+  border-style: ridge;
+  border-width: 2px;
+  font-size: 2rem;
+  overflow: hidden;
+  padding: 0.2rem 1.6rem;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  width: 210px;
+}
+
+.button:hover {
+  background-color: rgba(244, 67, 54, 0.75);
+  border-color: #fff;
+  color: #fff;
+}
+
+.csscode {
+  background: transparent;
+  min-height: 400px;
+}
+@media all and (min-width: 768px) {
+  .csscode {min-height: 240px;}
+}
+
+#getcss {
+  display: none;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 5px;
+  padding: 1rem;
+}
+@media all and (min-width: 600px) {
+  #getcss {font-size: 1.4rem;}
+}
+@media all and (min-width: 768px) {
+  #getcss {font-size: 1.6rem;}
+}
+@media all and (min-width: 980px) {
+  #getcss {min-width: 820px;}
+}
+
+/* Render CSS syntax highlighting */
+.Number { color: #3c98d9; }
+.Constant { color: #ffa0a0; }
+.Function { color: #bcdbff; }
+.cssColor { color: #3c98d9; }
+.cssFunctionName { color: #dad085; }
+.StorageClass { color: #99cf50; }
+.cssClassName { color: #bcdbff; }
+.Comment { color: #80a0ff; }
