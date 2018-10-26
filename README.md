@@ -2,6 +2,8 @@
 
 Generate a random gradient with two colour stops at a random angle and print out CSS code.
 
+The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
+
 ## Changelog
 
 + 20181023 - v0.1
