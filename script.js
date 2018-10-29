@@ -84,9 +84,10 @@ function showHideCss(){
 }
 
 document.onload = showHideCss();
+document.getElementById("getcss").innerHTML = uglyFunction();
 
 document.getElementById("button_gen").addEventListener("click", function() {
-  pickTheCol()
+  pickTheCol();
   gradient();
   document.body.style.background = gradient().gradient;
   document.getElementById("getcss").innerHTML = uglyFunction();
