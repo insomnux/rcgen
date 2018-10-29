@@ -18,8 +18,14 @@
 
 <div class="wrapper">
   <div class="links">
-    <button class="button" onclick="gradient();">New gradient</button>
-    <button id="button_show" class="button">Show CSS code</button>
+    <p>
+      <button id="button_gen" class="button">New gradient</button>
+      <button id="button_show" class="button">Show CSS code</button>
+    </p>
+    <p>
+      <label for="pickcol" id="blabel">...or pick a colour: </label>
+      <input id="pickcol" name="Colour Picker" type="color"/>
+    </p>
   </div>
   <div class="csscode">
     <pre id="getcss"></pre>

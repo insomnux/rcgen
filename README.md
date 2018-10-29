@@ -6,6 +6,13 @@ The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
 
 ## Changelog
 
-+ 20181023 - v0.1
++ 2018-10-29
+  - Added a colour picker
+  - Re-structured `script.js`
++ 2018-10-23 - v0.1
   - Added [GitHub ribbon](http://tholman.com/github-corners/)
   - Basic HTML, CSS and JS for the Random gradient Generator
+
+## TODO
+
+- Add "reset" for colour picker (set back to #000)
