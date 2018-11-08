@@ -1,7 +1,9 @@
+"use strict";
+
 /* Catch input from colour picker */
 function pickTheCol() {
-  initCol = document.getElementById("pickcol").value;
-  pickCol = document.querySelector("#pickcol");
+  var initCol = document.getElementById("pickcol").value;
+  var pickCol = document.querySelector("#pickcol");
   pickCol.value = initCol;
   pickCol.select();
   return pickCol;
@@ -22,9 +24,9 @@ function gradient() {
   // First colour
   var chooseColour = pickTheCol()
   if (chooseColour.value != "#000000" ) {
-    fromcolour = chooseColour.value
+    var fromcolour = chooseColour.value
   } else {
-    var fromcolour = randcol('#');
+    fromcolour = randcol('#');
   }
 
   // Second colour
@@ -35,30 +37,32 @@ function gradient() {
   if ( 90 - degrees < 0 ) { // calculate degrees for old browser vendor
     var obdegrees = 450 -  degrees
   } else {
-    var obdegrees = 90 - degrees
+    obdegrees = 90 - degrees
   }
 
   // Get the background colour
-  var gradient = "linear-gradient(" + degrees + "deg, " + fromcolour + ", " + tocolour + ")";
+  var cgradient = "linear-gradient(" + degrees + "deg, " + fromcolour + ", " + tocolour + ")";
 
-  return {fromcolour, tocolour, degrees, obdegrees, gradient};
+  return {fromcolour, tocolour, degrees, obdegrees, cgradient};
 }
-document.body.style.background = gradient().gradient;
+document.body.style.background = gradient().cgradient;
 
 
 /* Assign strings to variables for the "Show CSS code" */
 function uglyFunction() {
-  fromCol = gradient().fromcolour;
-  toCol = gradient().tocolour;
-  nDegrees = gradient().degrees;
-  nObdegrees = gradient().obdegrees;
+  var fromCol = gradient().fromcolour;
+  var toCol = gradient().tocolour;
+  var nDegrees = gradient().degrees;
+  var nObdegrees = gradient().obdegrees;
   var cssclass = "<span class='StorageClass'>background</span>: "
   var cssattr = "<span class='cssFunctionName'>linear-gradient</span>("
-  var oldBrowsers = cssclass + fromCol + "&semi; <span class='Comment'>/* Fallback for old browsers*/</span>"
-  var oldWebkit = cssclass + "<span class='Comment'>-webkit-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Webkit*/</span>"
-  var oldMoz = cssclass + "<span class='Comment'>-moz-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Firefox */</span>"
-  var oldOpera = cssclass + "<span class='Comment'>-o-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Opera */</span>"
-  var modernBrowsers = cssclass + cssattr + nDegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi;"
+
+  var oldBrowsers, oldWebkit, oldMoz, oldOpera, modernBrowsers, getCssGradient;
+  oldBrowsers = cssclass + fromCol + "&semi; <span class='Comment'>/* Fallback for old browsers*/</span>"
+  oldWebkit = cssclass + "<span class='Comment'>-webkit-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Webkit*/</span>"
+  oldMoz = cssclass + "<span class='Comment'>-moz-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Firefox */</span>"
+  oldOpera = cssclass + "<span class='Comment'>-o-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Opera */</span>"
+  modernBrowsers = cssclass + cssattr + nDegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi;"
   
   getCssGradient = oldBrowsers + "<br />" + oldWebkit + "<br />" + oldMoz + "<br />" + oldOpera + "<br />" + modernBrowsers;
   return getCssGradient;
@@ -89,7 +93,7 @@ document.getElementById("getcss").innerHTML = uglyFunction();
 document.getElementById("button_gen").addEventListener("click", function() {
   pickTheCol();
   gradient();
-  document.body.style.background = gradient().gradient;
+  document.body.style.background = gradient().cgradient;
   document.getElementById("getcss").innerHTML = uglyFunction();
 })
 
