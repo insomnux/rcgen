@@ -11,6 +11,14 @@ function pickTheCol() {
 
 window.addEventListener("load", pickTheCol, false);
 
+/* Reset colour picker */
+function delTheCol() {
+  var delCol = document.querySelector("#pickcol");
+  delCol.value = "#000000";
+}
+
+window.addEventListener("load", delTheCol, false);
+
 /* Generate two colours and a degrees number for the random gradient */
 
 function gradient() {
@@ -89,6 +97,8 @@ function showHideCss(){
 
 document.onload = showHideCss();
 document.getElementById("getcss").innerHTML = uglyFunction();
+
+document.getElementById("delcol").addEventListener("click", delTheCol);
 
 document.getElementById("button_gen").addEventListener("click", function() {
   pickTheCol();

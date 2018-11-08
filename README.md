@@ -7,6 +7,7 @@ The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
 ## Changelog
 
 + 2018-11-08
+  - Added button to reset colour picker
   - JavaScript in strict mode, declared variables as necessary
 + 2018-10-29
   - Added a colour picker
@@ -17,4 +18,4 @@ The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
 
 ## TODO
 
-- Add "reset" for colour picker (set back to #000)
+...
