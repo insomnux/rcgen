@@ -6,6 +6,8 @@ The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
 
 ## Changelog
 
++ 2018-11-08
+  - JavaScript in strict mode, declared variables as necessary
 + 2018-10-29
   - Added a colour picker
   - Re-structured `script.js`
