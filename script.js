@@ -29,7 +29,13 @@ function rcgen() {
     }
 
     // The colours:
-    var fromcolour = randcol();
+
+    var chooseColour = pickTheCol();
+    if (chooseColour.value != "#000000" ) {
+      var fromcolour = chooseColour.value;
+    } else {
+      var fromcolour = randcol();
+    }
     var tocolour = randcol();
 
     // Degrees:
