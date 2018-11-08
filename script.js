@@ -80,29 +80,30 @@ function rcgen() {
     return getCssGradient;
   }
 
-  /* Show CSS code */
 
-  function showHideCss(){
-
-    var preButton = document.getElementById("button_show");
-    var preBox = document.getElementById("getcss");
-
-    preButton.addEventListener("click", function (event) {
-        if (preBox.style.display == "block") {
-          preBox.style.display = "none";
-          preButton.innerHTML = "Show CSS code";
-        } else {
-          preBox.style.display = "block";
-          preButton.innerHTML = "Hide CSS code";
-        }
-      }
-    );
-  }
-
-  document.onload = showHideCss();
   document.getElementById("getcss").innerHTML = uglyFunction();
   document.getElementById("delcol").addEventListener("click", delTheCol);
 }
+
+/* Show CSS code */
+
+function showHideCss(){
+
+  var preButton = document.getElementById("button_show");
+  var preBox = document.getElementById("getcss");
+
+  preButton.addEventListener("click", function (event) {
+      if (preBox.style.display == "block") {
+        preBox.style.display = "none";
+        preButton.innerHTML = "Show CSS code";
+      } else {
+        preBox.style.display = "block";
+        preButton.innerHTML = "Hide CSS code";
+      }
+    }
+  );
+}
+document.onload = showHideCss();
 
 document.onload = rcgen();
 
