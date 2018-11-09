@@ -29,13 +29,15 @@ function rcgen() {
     }
 
     // The colours:
-
     var chooseColour = pickTheCol();
+
+    // colour one, random if no selected from col.picker
     if (chooseColour.value != "#000000" ) {
       var fromcolour = chooseColour.value;
     } else {
       var fromcolour = randcol();
     }
+    //color two always random
     var tocolour = randcol();
 
     // Degrees:
@@ -61,9 +63,6 @@ function rcgen() {
 
   document.body.style.background = bggradient;
 
-  //console.log("from:", fromCol, "to:", toCol, "deg:", nDegrees)
-  //console.log(bggradient)
-  
   /* Assign strings to variables for the "Show CSS code" */
   function uglyFunction() {
     var cssclass = "<span class='StorageClass'>background</span>: "
