@@ -2,20 +2,6 @@
 
 Generate a random gradient with two colour stops at a random angle and print out CSS code.
 
-The page: [Random Gradient Generator](https://insomnux.github.io/rcgen/)
+Clicking on `New gradient` will generate a new, random gradient. Using the colourpicker will generate a gradient with the selected colour plus one random colour the next time(s) you click on `New gradient`. `Reset` makes the colour generation random again.
 
-## Changelog
-
-+ 2018-11-08
-  - Added button to reset colour picker
-  - JavaScript in strict mode, declared variables as necessary
-+ 2018-10-29
-  - Added a colour picker
-  - Re-structured `script.js`
-+ 2018-10-23 - v0.1
-  - Added [GitHub ribbon](http://tholman.com/github-corners/)
-  - Basic HTML, CSS and JS for the Random gradient Generator
-
-## TODO
-
-...
+Demo: [Random Gradient Generator](https://insomnux.github.io/rcgen/)

@@ -1,4 +1,4 @@
-# Tarballs #
+# Tarballs
 *.gz
 *.bz2
 *.xz
@@ -6,6 +6,9 @@
 *.txz
 *.zip
 
-# Backup files #
+# Backup files
 *.swp
 *.un~
+
+# Do not track CHANGELOG
+CHANGELOG
