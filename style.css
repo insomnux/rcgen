@@ -74,8 +74,13 @@ pre {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100%;
+}
+
+@media all and (min-width: 480px) and (min-height: 520px) {
+  .wrapper {
+    height: 100vh;
+  }
 }
 
 .button, .smallbutton {
