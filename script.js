@@ -24,7 +24,7 @@ function rcgen() {
   /* Generate two colours and a degrees number for the random gradient */
   function gradient() {
     function randcol() {
-      var hx = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+      var hx = "#" + (Math.random().toString(16) + "000000").substring(2,8);
       return hx;
     }
 
@@ -32,7 +32,7 @@ function rcgen() {
     var chooseColour = pickTheCol();
 
     // colour one, random if no selected from col.picker
-    if (chooseColour.value != "#000000" ) {
+    if (chooseColour.value !== "#000000" ) {
       var fromcolour = chooseColour.value;
     } else {
       var fromcolour = randcol();
@@ -43,9 +43,9 @@ function rcgen() {
     // Degrees:
     var degrees = Math.round( Math.random() * 360 );
     if ( 90 - degrees < 0 ) { // calculate degrees for old browser vendor
-      var obdegrees = 450 -  degrees
+      var obdegrees = 450 -  degrees;
     } else {
-      obdegrees = 90 - degrees
+      obdegrees = 90 - degrees;
     }
     // Get the background colour
     var cgradient = "linear-gradient(" + degrees + "deg, " + fromcolour + ", " + tocolour + ")";
@@ -65,16 +65,16 @@ function rcgen() {
 
   /* Assign strings to variables for the "Show CSS code" */
   function uglyFunction() {
-    var cssclass = "<span class='StorageClass'>background</span>: "
-    var cssattr = "<span class='cssFunctionName'>linear-gradient</span>("
+    var cssclass = "<span class='StorageClass'>background</span>: ";
+    var cssattr = "<span class='cssFunctionName'>linear-gradient</span>(";
 
     var oldBrowsers, oldWebkit, oldMoz, oldOpera, modernBrowsers, getCssGradient;
-    oldBrowsers = cssclass + fromCol + "&semi; <span class='Comment'>/* Fallback for old browsers*/</span>"
-    oldWebkit = cssclass + "<span class='Comment'>-webkit-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Webkit*/</span>"
-    oldMoz = cssclass + "<span class='Comment'>-moz-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Firefox */</span>"
-    oldOpera = cssclass + "<span class='Comment'>-o-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Opera */</span>"
-    modernBrowsers = cssclass + cssattr + nDegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi;"
-    
+    oldBrowsers = cssclass + fromCol + "&semi; <span class='Comment'>/* Fallback for old browsers*/</span>";
+    oldWebkit = cssclass + "<span class='Comment'>-webkit-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Webkit*/</span>";
+    oldMoz = cssclass + "<span class='Comment'>-moz-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Old Firefox */</span>";
+    oldOpera = cssclass + "<span class='Comment'>-o-</span>" + cssattr + nObdegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi; <span class='Comment'>/* Opera */</span>";
+    modernBrowsers = cssclass + cssattr + nDegrees + "<span class='Constant'>deg</span>, " + fromCol + ", " + toCol + ")&semi;";
+
     getCssGradient = oldBrowsers + "<br />" + oldWebkit + "<br />" + oldMoz + "<br />" + oldOpera + "<br />" + modernBrowsers;
     return getCssGradient;
   }
@@ -92,7 +92,7 @@ function showHideCss(){
   var preBox = document.getElementById("getcss");
 
   preButton.addEventListener("click", function (event) {
-      if (preBox.style.display == "block") {
+      if (preBox.style.display === "block") {
         preBox.style.display = "none";
         preButton.innerHTML = "Show CSS code";
       } else {
