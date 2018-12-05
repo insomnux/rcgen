@@ -1,6 +1,6 @@
 /* *
- * Basic stylesheet for https://insomnux.github.io/html-tags-dummy/
- * Last updated: 24/11/2017
+ * Basic stylesheet for https://insomnux.github.io/rcgen/
+ * Last updated: 05/12/2018
  * Source: https://github.com/insomnux/html-tags-dummy
  * */
 
@@ -31,7 +31,7 @@ html {
 
 body{
   color: #444;
-  font-family: Lato, "Lucida Grande", Tahoma, "Nimbus Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
   font-size: 1.6em;
   font-weight: 300;
   letter-spacing: .01em;
